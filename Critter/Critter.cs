@@ -14,7 +14,6 @@ namespace Critter
         private string affinitycritter;
         private float hp;
 
-        private Critter critter;
         private Skill skill;
         private Affinity affinity;
 

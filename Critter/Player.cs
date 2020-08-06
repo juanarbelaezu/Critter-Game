@@ -10,10 +10,10 @@ namespace Critter
         public string Name { get; private set; }
         internal List<Critter> Critter { get => critter; set => critter = value; }
 
-        public Player(string name)
+        /*public Player(string name)
         {
             Name = name;
-        }
+        }*/
 
         public void FillCritter(Critter newcritter)
         {
