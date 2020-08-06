@@ -1,0 +1,13 @@
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\bin\Debug\netcoreapp3.1\Critter.exe
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\bin\Debug\netcoreapp3.1\Critter.deps.json
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\bin\Debug\netcoreapp3.1\Critter.runtimeconfig.json
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\bin\Debug\netcoreapp3.1\Critter.runtimeconfig.dev.json
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\bin\Debug\netcoreapp3.1\Critter.dll
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\bin\Debug\netcoreapp3.1\Critter.pdb
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\obj\Debug\netcoreapp3.1\Critter.csprojAssemblyReference.cache
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\obj\Debug\netcoreapp3.1\Critter.AssemblyInfoInputs.cache
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\obj\Debug\netcoreapp3.1\Critter.AssemblyInfo.cs
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\obj\Debug\netcoreapp3.1\Critter.csproj.CoreCompileInputs.cache
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\obj\Debug\netcoreapp3.1\Critter.dll
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\obj\Debug\netcoreapp3.1\Critter.pdb
+C:\Users\ASUS Q551\Desktop\Critter-Game\Critter\obj\Debug\netcoreapp3.1\Critter.genruntimeconfig.cache
