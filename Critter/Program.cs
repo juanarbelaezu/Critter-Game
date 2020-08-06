@@ -29,7 +29,7 @@ namespace Critter
                     Critter2atk();
                 }
 
-                void Critter1atk();
+                void Critter1atk()
                 {
                     if (pl1critter.Affinitycritter == pl2critter.Affinitycritter || pl1critter.Affinitycritter == "Wind" && pl2critter.Affinitycritter == "Earth" || pl1critter.Affinitycritter == "Water" && pl2critter.Affinitycritter == "Fire")
                     {
@@ -57,7 +57,7 @@ namespace Critter
                     }
                 }
 
-                void Critter2atk();
+                void Critter2atk()
                 {
                     if (pl2critter.Affinitycritter == pl1critter.Affinitycritter || pl2critter.Affinitycritter == "Wind" && pl1critter.Affinitycritter == "Earth" || pl2critter.Affinitycritter == "Water" && pl1critter.Affinitycritter == "Fire")
                     {
