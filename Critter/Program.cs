@@ -22,11 +22,25 @@ namespace Critter
 
                 if(pl1critter.BaseSpeed > pl2critter.BaseSpeed)
                 {
-                    Critter1atk();
+                    if(pl1critter.Skill.SupportSkill == false)
+                    {
+                        Critter1atk();
+                    }
+                    else if (pl1critter.Skill.SupportSkill == true)
+                    {
+                        SupSkillpl1();
+                    }
                 }
                 else if(pl2critter.BaseSpeed > pl1critter.BaseSpeed)
                 {
-                    Critter2atk();
+                    if (pl2critter.Skill.SupportSkill == false)
+                    {
+                        Critter2atk();
+                    }
+                    else if(pl2critter.Skill.SupportSkill == true)
+                    {
+                        SupSkillpl2();
+                    }
                 }
 
                 void Critter1atk()
@@ -102,9 +116,17 @@ namespace Critter
                         player1.Critter.Remove(player1.Critter[0]);
                     }
                 }
-            }
 
-            
+                void SupSkillpl1()
+                {
+
+                }
+
+                void SupSkillpl2()
+                {
+
+                }
+            }
         }
     }
 }
