@@ -9,6 +9,9 @@ namespace Critter
         private string name;
         private float baseAttack;
         private float basedefense;
+        private float attack;
+        private float defense;
+        private float speed;
         private float baseSpeed;
         private int moveset;
         private string affinitycritter;
@@ -24,6 +27,9 @@ namespace Critter
         public string Affinitycritter { get => affinitycritter; set => affinitycritter = value; }
         public float Hp { get => hp; set => hp = value; }
         public float BaseSpeed { get => baseSpeed; set => baseSpeed = value; }
+        public float Attack { get => attack; set => attack = value; }
+        public float Defense { get => defense; set => defense = value; }
+        public float Speed { get => speed; set => speed = value; }
         internal Skill Skill { get => skill;}
         internal Affinity Affinity { get => affinity;}
 
@@ -33,6 +39,9 @@ namespace Critter
             baseAttack = rnd.Next(10, 100);
             basedefense = rnd.Next(10, 100);
             baseSpeed = rnd.Next(1, 50);
+            attack = baseAttack;
+            defense = basedefense;
+            speed = baseSpeed;
         }
 
 

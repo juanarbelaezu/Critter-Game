@@ -49,25 +49,25 @@ namespace Critter
                     {
                         if (pl1critter.Affinitycritter == pl2critter.Affinitycritter || pl1critter.Affinitycritter == "Wind" && pl2critter.Affinitycritter == "Earth" || pl1critter.Affinitycritter == "Water" && pl2critter.Affinitycritter == "Fire")
                         {
-                            damageVal = (pl1critter.BaseAttack + pl1critter.Skill.Power) * 0.5f;
+                            damageVal = (pl1critter.Attack + pl1critter.Skill.Power) * 0.5f;
                             pl2critter.Hp -= damageVal;
                             Critter2atk();
                         }
                         else if (pl1critter.Affinitycritter == "Dark" && pl2critter.Affinitycritter == "Light" || pl1critter.Affinitycritter == "Light" && pl2critter.Affinitycritter == "Dark" || pl1critter.Affinitycritter == "Fire" && pl2critter.Affinitycritter == "Water" || pl1critter.Affinitycritter == "Water" && pl2critter.Affinitycritter == "Wind" || pl1critter.Affinitycritter == "Earth" && pl2critter.Affinitycritter == "Wind")
                         {
-                            damageVal = (pl1critter.BaseAttack + pl1critter.Skill.Power) * 2f;
+                            damageVal = (pl1critter.Attack + pl1critter.Skill.Power) * 2f;
                             pl2critter.Hp -= damageVal;
                             Critter2atk();
                         }
                         else if (pl1critter.Affinitycritter == "Fire" && pl2critter.Affinitycritter == "Earth")
                         {
-                            damageVal = (pl1critter.BaseAttack + pl1critter.Skill.Power) * 0f;
+                            damageVal = (pl1critter.Attack + pl1critter.Skill.Power) * 0f;
                             pl2critter.Hp -= damageVal;
                             Critter2atk();
                         }
                         else
                         {
-                            damageVal = (pl1critter.BaseAttack + pl1critter.Skill.Power) * 1f;
+                            damageVal = (pl1critter.Attack + pl1critter.Skill.Power) * 1f;
                             pl2critter.Hp -= damageVal;
                             Critter2atk();
                         }
@@ -87,25 +87,25 @@ namespace Critter
                     {
                         if (pl2critter.Affinitycritter == pl1critter.Affinitycritter || pl2critter.Affinitycritter == "Wind" && pl1critter.Affinitycritter == "Earth" || pl2critter.Affinitycritter == "Water" && pl1critter.Affinitycritter == "Fire")
                         {
-                            damageVal = (pl2critter.BaseAttack + pl2critter.Skill.Power) * 0.5f;
+                            damageVal = (pl2critter.Attack + pl2critter.Skill.Power) * 0.5f;
                             pl2critter.Hp -= damageVal;
                             Critter1atk();
                         }
                         else if (pl2critter.Affinitycritter == "Dark" && pl1critter.Affinitycritter == "Light" || pl2critter.Affinitycritter == "Light" && pl1critter.Affinitycritter == "Dark" || pl2critter.Affinitycritter == "Fire" && pl1critter.Affinitycritter == "Water" || pl2critter.Affinitycritter == "Water" && pl1critter.Affinitycritter == "Wind" || pl2critter.Affinitycritter == "Earth" && pl1critter.Affinitycritter == "Wind")
                         {
-                            damageVal = (pl2critter.BaseAttack + pl2critter.Skill.Power) * 2f;
+                            damageVal = (pl2critter.Attack + pl2critter.Skill.Power) * 2f;
                             pl2critter.Hp -= damageVal;
                             Critter1atk();
                         }
                         else if (pl2critter.Affinitycritter == "Fire" && pl1critter.Affinitycritter == "Earth")
                         {
-                            damageVal = (pl2critter.BaseAttack + pl2critter.Skill.Power) * 0f;
+                            damageVal = (pl2critter.Attack + pl2critter.Skill.Power) * 0f;
                             pl2critter.Hp -= damageVal;
                             Critter1atk();
                         }
                         else
                         {
-                            damageVal = (pl2critter.BaseAttack + pl2critter.Skill.Power) * 1f;
+                            damageVal = (pl2critter.Attack + pl2critter.Skill.Power) * 1f;
                             pl2critter.Hp -= damageVal;
                             Critter1atk();
                         }
@@ -119,12 +119,40 @@ namespace Critter
 
                 void SupSkillpl1()
                 {
-
+                    if(pl1critter.Skill.Skilltype == 1)
+                    {
+                        pl1critter.Attack += pl1critter.Attack * 0.2f;
+                        //pl1critter.CounterA += 1;
+                    }
+                    else if(pl1critter.Skill.Skilltype == 2)
+                    {
+                        pl1critter.Defense += pl1critter.Defense * 0.2f;
+                        //pl1critter.CounterD += 1;
+                    }
+                    else if (pl1critter.Skill.Skilltype == 3)
+                    {
+                        pl2critter.Speed -= pl2critter.Speed * 0.3f;
+                        //pl1critter.CounterS +=1;
+                    }
                 }
 
                 void SupSkillpl2()
                 {
-
+                    if (pl2critter.Skill.Skilltype == 1)
+                    {
+                        pl2critter.Attack += pl2critter.Attack * 0.2f;
+                        //pl2critter.CounterA += 1;
+                    }
+                    else if (pl1critter.Skill.Skilltype == 2)
+                    {
+                        pl2critter.Defense += pl2critter.Defense * 0.2f;
+                        //pl2critter.CounterD += 1;
+                    }
+                    else if (pl2critter.Skill.Skilltype == 3)
+                    {
+                        pl1critter.Speed -= pl1critter.Speed * 0.3f;
+                        //pl2critter.CounterS +=1;
+                    }
                 }
             }
         }
