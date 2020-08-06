@@ -8,11 +8,27 @@ namespace Critter
     {
         private string name;
         private Affinity affinity;
-        private bool supportSkill;
+        private bool supportSkill = true;
         private int power;
 
         public string Name { get => name; }
         public bool SupportSkill { get => supportSkill; }
         public int Power { get => power; set => power = value; }
+
+        public void Givepowe()
+        {                  
+            Random rnd = new Random();
+
+            if(supportSkill == false)
+            {
+                power = rnd.Next(1, 10);
+            }
+            else if(supportSkill)
+            {
+                power = 0;
+            }
+        }
+
+
     }
 }
