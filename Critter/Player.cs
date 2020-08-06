@@ -8,6 +8,7 @@ namespace Critter
     {
         private List<Critter> critter;
         public string Name { get; private set; }
+        internal List<Critter> Critter { get => critter; set => critter = value; }
 
         public Player(string name)
         {

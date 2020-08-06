@@ -9,11 +9,11 @@ namespace Critter
         private string name;
         private Affinity affinity;
         private bool supportSkill = true;
-        private int power;
+        private float power;
 
         public string Name { get => name; }
         public bool SupportSkill { get => supportSkill; }
-        public int Power { get => power; set => power = value; }
+        public float Power { get => power; set => power = value; }
 
         public void Givepowe()
         {                  
