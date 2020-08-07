@@ -9,7 +9,7 @@ namespace Critter
 
         void Play()
         {
-            if (player1.Critter != null && player2.Critter != null)
+            if (player1.CritterList != null && player2.CritterList != null)
             {
                 Battle();
             }
@@ -18,8 +18,8 @@ namespace Critter
 
         void Battle()
         {
-            Critter pl1critter = player1.Critter[0];
-            Critter pl2critter = player2.Critter[0];
+            Critter pl1critter = player1.CritterList[0];
+            Critter pl2critter = player2.CritterList[0];
             float damageVal;
 
             if (pl1critter.BaseSpeed > pl2critter.BaseSpeed)
@@ -49,7 +49,7 @@ namespace Critter
             {
                 if (pl2critter.Hp > 0)
                 {
-                    if (pl1critter.Affinitycritter == pl2critter.Affinitycritter || pl1critter.Affinitycritter == "Wind" && pl2critter.Affinitycritter == "Earth" || pl1critter.Affinitycritter == "Water" && pl2critter.Affinitycritter == "Fire")
+                    if (pl1critter.Affinitycritter == pl2critter.Affinitycritter || pl1critter.Affinitycritter == "2" && pl2critter.Affinitycritter == "4" || pl1critter.Affinitycritter == "3" && pl2critter.Affinitycritter == "0")
                     {
                         damageVal = (pl1critter.Attack + pl1critter.Skill.Power) * 0.5f;
                         pl2critter.Hp -= damageVal;
@@ -63,7 +63,7 @@ namespace Critter
                             SupSkillpl2();
                         }
                     }
-                    else if (pl1critter.Affinitycritter == "Dark" && pl2critter.Affinitycritter == "Light" || pl1critter.Affinitycritter == "Light" && pl2critter.Affinitycritter == "Dark" || pl1critter.Affinitycritter == "Fire" && pl2critter.Affinitycritter == "Water" || pl1critter.Affinitycritter == "Water" && pl2critter.Affinitycritter == "Wind" || pl1critter.Affinitycritter == "Earth" && pl2critter.Affinitycritter == "Wind")
+                    else if (pl1critter.Affinitycritter == "5" && pl2critter.Affinitycritter == "6" || pl1critter.Affinitycritter == "6" && pl2critter.Affinitycritter == "5" || pl1critter.Affinitycritter == "0" && pl2critter.Affinitycritter == "3" || pl1critter.Affinitycritter == "3" && pl2critter.Affinitycritter == "2" || pl1critter.Affinitycritter == "4" && pl2critter.Affinitycritter == "2")
                     {
                         damageVal = (pl1critter.Attack + pl1critter.Skill.Power) * 2f;
                         pl2critter.Hp -= damageVal;
@@ -77,7 +77,7 @@ namespace Critter
                             SupSkillpl2();
                         }
                     }
-                    else if (pl1critter.Affinitycritter == "Fire" && pl2critter.Affinitycritter == "Earth")
+                    else if (pl1critter.Affinitycritter == "0" && pl2critter.Affinitycritter == "4")
                     {
                         damageVal = (pl1critter.Attack + pl1critter.Skill.Power) * 0f;
                         pl2critter.Hp -= damageVal;
@@ -108,8 +108,8 @@ namespace Critter
                 }
                 else if (pl2critter.Hp <= 0)
                 {
-                    player1.Critter.Add(pl2critter);
-                    player2.Critter.Remove(player2.Critter[0]);
+                    player1.CritterList.Add(pl2critter);
+                    player2.CritterList.Remove(player2.CritterList[0]);
                     Console.WriteLine("Player 1 wins");
                     Play();
                 }
@@ -121,7 +121,7 @@ namespace Critter
 
                 if (pl1critter.Hp > 0)
                 {
-                    if (pl2critter.Affinitycritter == pl1critter.Affinitycritter || pl2critter.Affinitycritter == "Wind" && pl1critter.Affinitycritter == "Earth" || pl2critter.Affinitycritter == "Water" && pl1critter.Affinitycritter == "Fire")
+                    if (pl2critter.Affinitycritter == pl1critter.Affinitycritter || pl2critter.Affinitycritter == "2" && pl1critter.Affinitycritter == "4" || pl2critter.Affinitycritter == "3" && pl1critter.Affinitycritter == "0")
                     {
                         damageVal = (pl2critter.Attack + pl2critter.Skill.Power) * 0.5f;
                         pl2critter.Hp -= damageVal;
@@ -135,7 +135,7 @@ namespace Critter
                             SupSkillpl1();
                         }
                     }
-                    else if (pl2critter.Affinitycritter == "Dark" && pl1critter.Affinitycritter == "Light" || pl2critter.Affinitycritter == "Light" && pl1critter.Affinitycritter == "Dark" || pl2critter.Affinitycritter == "Fire" && pl1critter.Affinitycritter == "Water" || pl2critter.Affinitycritter == "Water" && pl1critter.Affinitycritter == "Wind" || pl2critter.Affinitycritter == "Earth" && pl1critter.Affinitycritter == "Wind")
+                    else if (pl2critter.Affinitycritter == "5" && pl1critter.Affinitycritter == "6" || pl2critter.Affinitycritter == "6" && pl1critter.Affinitycritter == "5" || pl2critter.Affinitycritter == "0" && pl1critter.Affinitycritter == "3" || pl2critter.Affinitycritter == "3" && pl1critter.Affinitycritter == "2" || pl2critter.Affinitycritter == "4" && pl1critter.Affinitycritter == "2")
                     {
                         damageVal = (pl2critter.Attack + pl2critter.Skill.Power) * 2f;
                         pl2critter.Hp -= damageVal;
@@ -149,7 +149,7 @@ namespace Critter
                             SupSkillpl1();
                         }
                     }
-                    else if (pl2critter.Affinitycritter == "Fire" && pl1critter.Affinitycritter == "Earth")
+                    else if (pl2critter.Affinitycritter == "0" && pl1critter.Affinitycritter == "4")
                     {
                         damageVal = (pl2critter.Attack + pl2critter.Skill.Power) * 0f;
                         pl2critter.Hp -= damageVal;
@@ -180,8 +180,8 @@ namespace Critter
                 }
                 else if (pl1critter.Hp <= 0)
                 {
-                    player2.Critter.Add(pl1critter);
-                    player1.Critter.Remove(player1.Critter[0]);
+                    player2.CritterList.Add(pl1critter);
+                    player1.CritterList.Remove(player1.CritterList[0]);
                     Console.WriteLine("Player 2 wins");
                     Play();
                 }
@@ -291,8 +291,7 @@ namespace Critter
             Program p = new Program();
             p.player1.FillCritter();
             p.player2.FillCritter();
-            p.Play();
-            Console.WriteLine("Iniciar");
+            p.Battle();
         }
     }
 }

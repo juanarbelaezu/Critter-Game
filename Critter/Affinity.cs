@@ -8,16 +8,12 @@ namespace Critter
     {
         public enum Etype
         {
-            Fire,
-            Wind,
-            Water,
-            Earth,
-            Dark,
-            Light
+            Fire, //0
+            Wind, //2
+            Water, //3
+            Earth, //4
+            Dark, //5
+            Light //6
         }
-
-        private Etype typecritter;
-
-        public Etype Typecritter { get => typecritter; }
     }
 }

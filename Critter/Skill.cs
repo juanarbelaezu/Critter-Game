@@ -6,13 +6,11 @@ namespace Critter
 {
     class Skill : Affinity
     {
-        private string name;
         private bool supportSkill = true;
         private int skilltype;
         private float power;
         private string affinitySkill;
 
-        public string Name { get => name; }
         public bool SupportSkill { get => supportSkill; }
         public float Power { get => power; set => power = value; }
         public int Skilltype { get => skilltype; set => skilltype = value; }

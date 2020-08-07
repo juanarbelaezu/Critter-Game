@@ -6,7 +6,6 @@ namespace Critter
 {
     class Critter : Affinity
     {
-        private string name;
         private float baseAttack;
         private float basedefense;
         private float attack;
@@ -22,7 +21,6 @@ namespace Critter
 
         private Skill skill;
 
-        public string Name { get => name; }
         public float BaseAttack { get => baseAttack; set => baseAttack = value; }
         public float BaseDefense { get => basedefense; set => basedefense = value; }
         public int Moveset { get => moveset; set => moveset = value; }
@@ -57,6 +55,7 @@ namespace Critter
             skill = new Skill();
             skill.Affinitycal();
             skill.Givepowe();
+
         }
 
 
