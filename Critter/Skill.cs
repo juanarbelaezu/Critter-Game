@@ -35,9 +35,10 @@ namespace Critter
 
         public void Affinitycal()
         {
-            Array value = Etype.GetValues(typeof(string));
+            Array value = Etype.GetValues(typeof(Etype));
             Random random = new Random();
-            affinitySkill = (string)value.GetValue(random.Next(value.Length));
+            int i = (int)value.GetValue(random.Next(value.Length));
+            affinitySkill = i.ToString();
         }
     }
 }
