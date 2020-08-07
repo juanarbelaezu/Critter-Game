@@ -6,7 +6,7 @@ namespace Critter
 {
     class Skill : Affinity
     {
-        private bool supportSkill = true;
+        private bool supportSkill;
         private int skilltype;
         private float power;
         private string affinitySkill;
@@ -19,15 +19,18 @@ namespace Critter
         public void Givepowe()
         {                  
             Random rnd = new Random();
+            supportSkill = rnd.Next(2) == 1;
 
-            if(supportSkill == false)
+            if (supportSkill == false)
             {
                 power = rnd.Next(1, 10);
+                Console.WriteLine("Poder = " + power);
             }
             else if(supportSkill)
             {
                 power = 0;
                 skilltype = rnd.Next(1, 3);
+                Console.WriteLine("Critter de soporte, poder es " + power);
             }
         }
 

@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Critter
 {
-    class Program
+    class Battle : Program
     {
+
         Player player1 = new Player();
         Player player2 = new Player();
 
@@ -11,13 +14,21 @@ namespace Critter
         {
             if (player1.CritterList != null && player2.CritterList != null)
             {
-                //Battle();
+                Battlef();
+            }
+            else if(player1.CritterList == null)
+            {
+                Console.WriteLine("No se puede continuar porque el jugador 1 no tiene una criatura");
+            }
+            else if(player2.CritterList == null)
+            {
+                Console.WriteLine("No se puede continuar porque el jugador 2 no tiene una criatura");
             }
         }
 
-
-        /*void Battle()
+        void Battlef()
         {
+
             Critter pl1critter = player1.CritterList[0];
             Critter pl2critter = player2.CritterList[0];
             float damageVal;
@@ -284,15 +295,6 @@ namespace Critter
                     }
                 }
             }
-        }*/
-
-        static void Main(string[] args)
-        {
-            Program p = new Program();
-            Battle b = new Battle();
-            b.player1.FillCritter();
-            b.player2.FillCritter();
-            b.Play();
         }
     }
 }
