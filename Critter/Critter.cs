@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Critter
 {
-    class Critter
+    class Critter : Affinity
     {
         private string name;
         private float baseAttack;
@@ -16,9 +16,11 @@ namespace Critter
         private int moveset;
         private string affinitycritter;
         private float hp;
+        private int counterA;
+        private int counterD;
+        private int counterS;
 
         private Skill skill;
-        private Affinity affinity;
 
         public string Name { get => name; }
         public float BaseAttack { get => baseAttack; set => baseAttack = value; }
@@ -30,10 +32,13 @@ namespace Critter
         public float Attack { get => attack; set => attack = value; }
         public float Defense { get => defense; set => defense = value; }
         public float Speed { get => speed; set => speed = value; }
+        public int CounterS { get => counterS; set => counterS = value; }
+        public int CounterD { get => counterD; set => counterD = value; }
+        public int CounterA { get => counterA; set => counterA = value; }
         internal Skill Skill { get => skill;}
-        internal Affinity Affinity { get => affinity;}
+        /*internal Affinity Affinity { get => affinity;}*/
 
-        private void Calculatedam()
+        public void CalculatedStats()
         {
             Random rnd = new Random();
             baseAttack = rnd.Next(10, 100);
@@ -42,6 +47,15 @@ namespace Critter
             attack = baseAttack;
             defense = basedefense;
             speed = baseSpeed;
+
+            Array value = Etype.GetValues(typeof(string));
+            Random random = new Random();
+            affinitycritter = (string)value.GetValue(random.Next(value.Length));
+            Console.WriteLine("Affinidad del Critter" + affinitycritter);
+
+            skill = new Skill();
+            skill.Affinitycal();
+            skill.Givepowe();
         }
 
 

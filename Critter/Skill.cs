@@ -4,18 +4,19 @@ using System.Text;
 
 namespace Critter
 {
-    class Skill
+    class Skill : Affinity
     {
         private string name;
-        private Affinity affinity;
         private bool supportSkill = true;
         private int skilltype;
         private float power;
+        private string affinitySkill;
 
         public string Name { get => name; }
         public bool SupportSkill { get => supportSkill; }
         public float Power { get => power; set => power = value; }
         public int Skilltype { get => skilltype; set => skilltype = value; }
+        public string AffinitySkill { get => affinitySkill; set => affinitySkill = value; }
 
         public void Givepowe()
         {                  
@@ -32,6 +33,11 @@ namespace Critter
             }
         }
 
-
+        public void Affinitycal()
+        {
+            Array value = Etype.GetValues(typeof(string));
+            Random random = new Random();
+            affinitySkill = (string)value.GetValue(random.Next(value.Length));
+        }
     }
 }

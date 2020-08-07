@@ -15,9 +15,18 @@ namespace Critter
             Name = name;
         }*/
 
-        public void FillCritter(Critter newcritter)
+        Critter critter1 = new Critter();
+        Critter critter2 = new Critter();
+        Critter critter3 = new Critter();
+
+        public void FillCritter()
         {
-            critter.Add(newcritter);
+            critter1.CalculatedStats();
+            critter2.CalculatedStats();
+            critter3.CalculatedStats();
+            critter.Add(critter1);
+            critter.Add(critter2);
+            critter.Add(critter3);
         }
     }
 }
