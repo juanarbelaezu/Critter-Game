@@ -10,7 +10,7 @@ namespace Critter
         Player player1 = new Player();
         Player player2 = new Player();
 
-        void Play()
+        public void Play()
         {
             if (player1.CritterList != null && player2.CritterList != null)
             {
